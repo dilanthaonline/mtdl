@@ -1,0 +1,26 @@
+.navigator-wrapper
+{
+  height: 100%;
+  background: #134c85;
+}
+
+.mtdl-nav-link
+{
+  background: transparent;
+  border: 0;
+  padding: 20px ;
+  color: #fff;
+  border-bottom: 1px solid #426991;
+  text-align: left;
+  font-weight: bold;
+
+  &:hover
+  {
+    background: #ffffff13;
+    cursor: pointer;
+  }
+  &:focus
+  {
+    background: #ffffff13;
+  }
+}

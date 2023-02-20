@@ -1,0 +1,42 @@
+
+.figure-card
+{
+
+
+  width: 100%;
+
+  h4
+  {
+    margin: 0 0 0 0;
+
+  }
+
+
+  mat-label
+  {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  h1
+  {
+    font-size: 72px;
+    margin: 0;
+    color: #e12f98;
+  }
+
+  .spinner-wrapper
+  {
+    padding: 20px 0 0;
+    mat-progress-spinner
+    {
+      width: 50px !important;
+      height: 50px !important;
+      margin-right: 20px;
+      background: #d1eaff;
+      border-radius: 100%;
+      border: 5px solid #e7f4ff;
+    }
+  }
+
+}

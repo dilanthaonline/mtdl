@@ -1,0 +1,91 @@
+.qformview
+{
+  mat-card-header
+  {
+    margin-bottom: 10px;
+  }
+
+  .video-thumb
+  {
+    margin: 10px 0;
+  }
+
+
+}
+
+
+
+.user-thumb
+{
+  overflow: hidden;
+
+  img
+  {
+    max-width: 100%;
+    min-height: 100%;
+  }
+}
+
+mat-accordion
+{
+  mat-panel-title
+  {
+    mat-icon
+    {
+      margin-right: 10px;
+    }
+  }
+
+}
+
+mat-expansion-panel
+{
+
+  .question-wrapper
+{
+  .question-number
+  {
+    margin-right: 10px;
+    background: #eb008b;
+    border-radius: 5px;
+    padding: 4px;
+    color: #fff;
+
+  }
+
+  h4
+  {
+    margin-bottom: 0;
+  }
+}
+
+mat-list-option
+{
+  height: 34px;
+
+  span
+  {
+    font-size: 14px;
+
+
+  }
+}
+
+mat-selection-list
+{
+  margin-left: 30px;
+}
+
+}
+
+.answer-selected
+{
+  background: #e9e9e9;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+mat-card-actions
+{
+  padding: 40px 20px 20px;
+}

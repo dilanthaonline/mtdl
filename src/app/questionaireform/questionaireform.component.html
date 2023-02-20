@@ -1,0 +1,89 @@
+
+<div class="qformview-wrapper">
+
+
+
+  <div class="mtdl-content-header">
+    <h1 class="mdtl-blue"> Treating the Special wounds test
+      <mat-label>  Successful treatment of difficult wounds requires assessment of the entire patient and not just the wound. Systemic problems often impair wound healing; conversely, nonhealing wounds may herald systemic pathology </mat-label>
+    </h1>
+  </div>
+
+<div class="qformview">
+
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="user-thumb">
+        <img src="./../../assets/images/profile.png" />
+      </div>
+      <mat-card-title class="mdtl-blue">
+        <strong> Treating the Special wounds </strong>
+      </mat-card-title>
+      <mat-card-subtitle> <mat-label> By Dr. Jeorge Samarasekara </mat-label> <mat-label> M.B.B.S </mat-label> </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = false"
+                             (closed)="panelOpenState = false">
+
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="mdtl-blue">videocam</mat-icon>
+             <strong>General Training on treating the Special wound made by glass parts </strong>
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/sNS67ZJQVDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="mdtl-blue">question_answer</mat-icon>
+             <strong> Questionaire</strong>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="question-wrapper">
+
+            <h4><mat-label class="question-number">Q:1</mat-label> What is the major advantage of using 0.2mm cutting blade on first skin ?</h4>
+
+
+            <mat-selection-list #q1answersmodel [multiple]="false">
+              <mat-list-option *ngFor="let answers of q1answers" [value]="answers">
+              <span>  {{answers}} </span>
+              </mat-list-option>
+            </mat-selection-list>
+
+            <p class="answer-selected">
+              <strong> <mat-label class="mdtl-pink"> Your Answer is :</mat-label>  <mat-label class="mdtl-blue"> {{q1answersmodel.selectedOptions.hasValue() ? q1answersmodel.selectedOptions.selected[0].value : 'None'}} </mat-label> </strong>
+            </p>
+
+
+          </div>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+
+
+    </mat-card-content>
+
+    <mat-card-actions>
+
+      <button color="primary" mat-raised-button  (click)="loadModule('Myquestionnaires')"> Back to my Questions </button>
+      <span class="spacer"></span>
+      <button color="accent" mat-raised-button  (click)="loadModule('Myquestionnaires')"> Submit Answers </button>
+
+    </mat-card-actions>
+
+  </mat-card>
+
+
+</div>
+
+
+  </div>
