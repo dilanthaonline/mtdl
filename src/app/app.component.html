@@ -3,14 +3,15 @@
 
 
 
-<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center"  *ngIf="visible" >
+<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center" *ngIf="!visible">
 
   <mat-card>
-    <mat-card-content fxLayoutGap="150px">
+    <mat-card-content>
       <mat-card-header>
-        <mat-card-title>Welcome to MTDL </mat-card-title>
+        <mat-card-title> <img src="../assets/images/mtdl-logo.svg" /> </mat-card-title>
       </mat-card-header>
-      <form class="login-box" fxLayout="column"  fxLayoutGap="5px">
+
+      <form class="login-box" fxLayout="column" fxLayoutGap="5px">
         <mat-form-field>
           <mat-label> Name </mat-label>
           <input matInput>
@@ -21,7 +22,8 @@
           <input matInput>
         </mat-form-field>
 
-        <button mat-flat-button color="primary" (click)="onclick()" type="button" >Login</button>
+        <button mat-flat-button color="primary" (click)="onclick()"
+          type="button">Login</button>
       </form>
 
 
@@ -43,8 +45,8 @@
   <div class="drawer-content">
 
     <div class="topnavbar-wrapper" fxLayout="row" fxLayoutAlign="center center">
-
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <button mat-icon-button class="example-icon" aria-label="Example
+        icon-button with menu icon" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
 
@@ -60,9 +62,7 @@
 
 
       <div fxLayout="row" fxLayoutAlign="center center" class="footer">
-
         Copyright © 2023 Medical Training Distance Learning. All Rights Reserved
-
       </div>
 
 
@@ -74,6 +74,3 @@
 
 
 </mat-drawer-container>
-
-
-

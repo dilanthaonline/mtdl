@@ -1,7 +1,13 @@
 .login-box-wrapper
 {
   height: 100vh;
+  background: url(../assets/images/medical-landing-background.jpg);
+  background-size: 100% auto;
 
+  mat-card-title
+  {
+    margin-bottom: 20px;
+  }
 }
 
 .drawer-container {
