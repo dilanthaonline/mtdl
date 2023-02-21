@@ -1,4 +1,3 @@
-
 <div class="qformview-wrapper">
 
 
@@ -13,16 +12,11 @@
 
   </div>
 
-
-
-
   <div class="qformview">
 
-    <mat-card class="add-assignment">
+    <mat-card class="add-assignment highlight mat-elevation-z1">
       <mat-card-header>
-        <div mat-card-avatar class="user-thumb">
-          <img src="./../../assets/images/profile.png" />
-        </div>
+
         <mat-card-title>
 
 
@@ -30,9 +24,6 @@
             <mat-label>Add Assignment Subject</mat-label>
             <strong color="primary"><input matInput type="text"></strong>
           </mat-form-field>
-
-
-
 
         </mat-card-title>
         <mat-card-subtitle>
@@ -44,7 +35,8 @@
         </mat-card-subtitle>
       </mat-card-header>
 
-      <mat-card-content class="assignment-button-controllers" fxLayoutGap="20px">
+      <mat-card-content class="assignment-button-controllers"
+        fxLayoutGap="20px">
         <button mat-raised-button color="accent"> Add </button>
       </mat-card-content>
 
@@ -54,23 +46,39 @@
 
 
     <mat-card>
+
+
       <mat-card-header>
-        <div mat-card-avatar class="user-thumb">
-          <img src="./../../assets/images/profile.png" />
-        </div>
-        <mat-card-title class="mdtl-blue">
-          <strong> General Training on Puncture wounds</strong>
+
+
+
+
+        <mat-card-title>
+          <h4 class="mdtl-blue">Assignment : Wounds</h4>
+
+          <mat-form-field class="add-assingment-input">
+            <mat-label>Assignment Subject</mat-label>
+            <strong color="primary"><input matInput type="text" value="Wounds"></strong>
+          </mat-form-field>
+
+
+
+
         </mat-card-title>
-        <mat-card-subtitle> <mat-label> Assignment by </mat-label> <mat-label
-            class="mdtl-blue">Dr. Jeorge Samarasekara </mat-label> <mat-label>
-            M.B.B.S </mat-label> </mat-card-subtitle>
+
+        <mat-card-subtitle>
+          <mat-form-field class="add-assingment-input">
+            <mat-label>Subtitile</mat-label>
+            <input matInput type="text" value="By Dr. Jeorge Samarasekara
+              M.B.B.S">
+          </mat-form-field>
+        </mat-card-subtitle>
       </mat-card-header>
 
-      <mat-card-content class="assignment-button-controllers" fxLayoutGap="20px">
-        <button mat-raised-button color="primary"
-          (click)="loadModule('QuestionnaireformviewComponent')"> View </button>
-        <button mat-raised-button color="primary"
-          (click)="loadModule('QuestionnaireformeditComponent')"> Edit </button>
+
+      <mat-card-content class="assignment-button-controllers"
+        fxLayoutGap="20px">
+        <button mat-raised-button color="primary"> Update </button>
         <button mat-raised-button color="warn"> Delete </button>
       </mat-card-content>
 

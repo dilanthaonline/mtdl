@@ -1,28 +1,29 @@
 
-.user-thumb {
-  overflow: hidden;
-
-  img {
-    max-width: 100%;
-    min-height: 100%;
-  }
-}
-
-.assignment-button-controllers
-{
-  padding:0 0 10px 70px;
-}
-
 
 .qformview {
 
+  h4
+  {
+    margin: 3px 16px 15px;
+  }
+  mat-card-header
+  {
+    display: block;
+  }
   mat-card {
     margin-bottom: 20px;
+
+
+    &.highlight
+    {
+      background: #a8bbd3;
+      border: 2px solid #81a5d1;
+    }
   }
 
   .add-assingment-input
   {
-    width: calc(100vw - 328px);
+    width: 100%;
   }
 
 
