@@ -30,7 +30,7 @@ import { QuestionaireformeditComponent } from './questionaireformedit/questionai
 import {MatStepperModule} from '@angular/material/stepper';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -68,6 +68,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     MatListModule,
     MatToolbarModule,
     MatStepperModule,
+    MatDialogModule
 
   ],
   providers: [],

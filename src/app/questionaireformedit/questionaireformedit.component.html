@@ -57,25 +57,30 @@
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <mat-icon class="mdtl-blue">videocam</mat-icon>
-                <strong>Upload your Lesson Tutorial </strong>
+                <strong>Link your Lesson / Tutorial </strong>
               </mat-panel-title>
+
+
 
             </mat-expansion-panel-header>
 
-            <div class="upload-controllers">
 
-              <mat-form-field class="add-video-controller">
-                <mat-label>Upload your video file</mat-label>
-                <input matInput type="text">
-                <button matSuffix mat-icon-button aria-label="Clear">
-                  <mat-icon>add_to_queue</mat-icon>
-                </button>
-              </mat-form-field>
+            <mat-form-field appearance="fill" class="select-media">
+              <mat-label>Your Lessons Library</mat-label>
+              <mat-select>
+                <mat-option value="option1">
+                  General Training on Puncture wounds
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
 
-              <button color="accent" mat-raised-button
-              (click)="loadModule('Myquestionnaires')"> Submit Video </button>
+            <button mat-button (click)="openDialog()">Preview Selected Video</button>
 
-            </div>
+            <iframe width="100%" height="400"
+            src="https://www.youtube.com/embed/sNS67ZJQVDA" title="YouTube video
+            player" frameborder="0" allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+            web-share" allowfullscreen></iframe>
 
           </mat-expansion-panel>
 
