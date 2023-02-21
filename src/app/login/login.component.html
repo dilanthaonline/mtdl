@@ -1,14 +1,15 @@
 
 
-
-<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center" >
-
+<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center"
+  *ngIf="!visible">
   <mat-card>
     <mat-card-content>
       <mat-card-header>
-        <mat-card-title>Welcome to MTDL </mat-card-title>
+        <mat-card-title> <img src="../assets/images/mtdl-logo.svg" />
+        </mat-card-title>
       </mat-card-header>
-      <form class="login-box" fxLayout="column">
+
+      <form class="login-box" fxLayout="column" fxLayoutGap="5px">
         <mat-form-field>
           <mat-label> Name </mat-label>
           <input matInput>
@@ -19,20 +20,27 @@
           <input matInput>
         </mat-form-field>
 
-        <p fxLayout="row" fxLayoutGap="20px">
+        <div fxLayout="row wrap">
 
-          <button mat-raised-button color="primary">Login</button>
+          <button mat-flat-button color="primary"
+            (click)="loadModule('Mydashboard')" (click)="onclick()"
+            type="button">Login</button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="accent"
+            (click)="loadModule('UserprofileComponent')" (click)="onclick()"
+            type="button">Register</button>
 
-          <button mat-flat-button color="primary">Register</button>
-        </p>
+        </div>
+
+        <button mat-button color="primary" (click)="onclick()"
+          fxFlexAlign="start"
+          type="button">Forgot password</button>
+        <span fxFlex="1 1 auto"></span>
+
 
       </form>
 
 
     </mat-card-content>
   </mat-card>
-
-
-
 </div>
-
