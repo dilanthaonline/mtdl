@@ -6,7 +6,8 @@ import {MatDialog} from '@angular/material/dialog';
 @Component({
   selector: 'app-questionaireformedit',
   templateUrl: './questionaireformedit.component.html',
-  styleUrls: ['./questionaireformedit.component.scss']
+  styleUrls: ['./questionaireformedit.component.scss'],
+
 })
 export class QuestionaireformeditComponent {
 
@@ -25,6 +26,11 @@ openDialog() {
     console.log(`Dialog result: ${result}`);
   });
 }
-
 }
+
+@Component({
+  selector: 'videopreview-dialog',
+  templateUrl: 'videopreview-dialog.html',
+})
+
 export class DialogContentExampleDialog {}
