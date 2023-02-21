@@ -1,0 +1,83 @@
+
+<div class="qformview-wrapper">
+
+
+
+  <div class="mtdl-content-header">
+    <h1 class="mdtl-blue"> Assignments
+      <mat-label> Successful treatment of difficult wounds requires assessment
+        of the entire patient and not just the wound. Systemic problems often
+        impair wound healing; conversely, nonhealing wounds may herald systemic
+        pathology </mat-label>
+    </h1>
+
+  </div>
+
+
+
+
+  <div class="qformview">
+
+    <mat-card class="add-assignment">
+      <mat-card-header>
+        <div mat-card-avatar class="user-thumb">
+          <img src="./../../assets/images/profile.png" />
+        </div>
+        <mat-card-title>
+
+
+          <mat-form-field class="add-assingment-input">
+            <mat-label>Add Assignment Subject</mat-label>
+            <strong color="primary"><input matInput type="text"></strong>
+          </mat-form-field>
+
+
+
+
+        </mat-card-title>
+        <mat-card-subtitle>
+          <mat-form-field class="add-assingment-input">
+            <mat-label>Add Subtitile</mat-label>
+            <input matInput type="text" value="By Dr. Jeorge Samarasekara
+              M.B.B.S">
+          </mat-form-field>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content class="assignment-button-controllers" fxLayoutGap="20px">
+        <button mat-raised-button color="accent"> Add </button>
+      </mat-card-content>
+
+    </mat-card>
+
+
+
+
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="user-thumb">
+          <img src="./../../assets/images/profile.png" />
+        </div>
+        <mat-card-title class="mdtl-blue">
+          <strong> General Training on Puncture wounds</strong>
+        </mat-card-title>
+        <mat-card-subtitle> <mat-label> Assignment by </mat-label> <mat-label
+            class="mdtl-blue">Dr. Jeorge Samarasekara </mat-label> <mat-label>
+            M.B.B.S </mat-label> </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content class="assignment-button-controllers" fxLayoutGap="20px">
+        <button mat-raised-button color="primary"
+          (click)="loadModule('QuestionnaireformviewComponent')"> View </button>
+        <button mat-raised-button color="primary"
+          (click)="loadModule('QuestionnaireformeditComponent')"> Edit </button>
+        <button mat-raised-button color="warn"> Delete </button>
+      </mat-card-content>
+
+    </mat-card>
+
+
+  </div>
+
+
+</div>

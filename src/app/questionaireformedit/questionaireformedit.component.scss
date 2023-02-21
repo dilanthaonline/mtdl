@@ -1,0 +1,61 @@
+
+.user-thumb {
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    min-height: 100%;
+  }
+}
+
+mat-accordion {
+
+  mat-panel-title {
+    mat-icon {
+      margin-right: 10px;
+    }
+  }
+
+}
+
+.qformview {
+
+  mat-card {
+    margin-bottom: 20px;
+  }
+
+  .add-assingment-input
+  {
+    width: calc(100vw - 328px);
+  }
+
+
+
+  }
+
+.add-video-controller
+{
+  width: calc(100vw - 315px);
+}
+
+.add-question
+{
+  width: calc(100vw - 385px);
+  margin-left: 20px;
+}
+
+
+.add-question-model
+{
+  mat-list-option
+  {
+    padding: 15px;
+    height: 105px;
+  }
+}
+
+
+mat-card-actions
+{
+ padding: 30px 20px;
+}

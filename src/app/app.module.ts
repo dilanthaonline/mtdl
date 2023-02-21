@@ -27,6 +27,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { QuestionaireformComponent } from './questionaireform/questionaireform.component';
 import { QuestionaireformeditComponent } from './questionaireformedit/questionaireformedit.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { AssignmentsComponent } from './assignments/assignments.component';
 
 
 
@@ -40,7 +42,8 @@ import { QuestionaireformeditComponent } from './questionaireformedit/questionai
     LoginComponent,
     TopnavbarComponent,
     QuestionaireformComponent,
-    QuestionaireformeditComponent
+    QuestionaireformeditComponent,
+    AssignmentsComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -60,8 +63,9 @@ import { QuestionaireformeditComponent } from './questionaireformedit/questionai
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatListModule,
     MatToolbarModule,
-    MatListModule
+    MatStepperModule,
 
   ],
   providers: [],

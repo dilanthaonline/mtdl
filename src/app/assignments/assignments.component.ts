@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-mylessons',
-  templateUrl: './mylessons.component.html',
-  styleUrls: ['./mylessons.component.scss']
+  selector: 'app-assignments',
+  templateUrl: './assignments.component.html',
+  styleUrls: ['./assignments.component.scss']
 })
-export class MylessonsComponent {
+export class AssignmentsComponent {
   constructor (private router:Router){}
 
   loadModule(pageName:string):void{
