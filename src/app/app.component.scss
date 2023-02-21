@@ -3,6 +3,9 @@
   height: 100vh;
   background: url(../assets/images/medical-landing-background.jpg);
   background-size: 100% auto;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
 
   mat-card-title
   {

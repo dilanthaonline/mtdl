@@ -10,10 +10,9 @@ import { Router } from '@angular/router';
 export class QuestionaireformComponent {
   panelOpenState = false;
   q1answers: string[] = ['Presice cutting line', 'Pressure point is good', 'Made by Nano Technology', 'Metal is new CR mixed', 'Hair thin Sharpen'];
-  constructor (private router:Router){}
 
+  constructor (private router:Router){}
   loadModule(pageName:string):void{
     this.router.navigate([`${pageName}`]);
-
   }
 }

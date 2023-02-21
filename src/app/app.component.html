@@ -1,14 +1,11 @@
-
-
-
-
-
-<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center" *ngIf="!visible">
+<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center"
+  *ngIf="!visible">
 
   <mat-card>
     <mat-card-content>
       <mat-card-header>
-        <mat-card-title> <img src="../assets/images/mtdl-logo.svg" /> </mat-card-title>
+        <mat-card-title> <img src="../assets/images/mtdl-logo.svg" />
+        </mat-card-title>
       </mat-card-header>
 
       <form class="login-box" fxLayout="column" fxLayoutGap="5px">
@@ -26,14 +23,10 @@
           type="button">Login</button>
       </form>
 
-
     </mat-card-content>
   </mat-card>
 
-
-
 </div>
-
 
 
 <mat-drawer-container class="drawer-container" autosize>
@@ -56,11 +49,7 @@
     </div>
 
     <div class="content-wrapper">
-
       <router-outlet></router-outlet>
-
-
-
       <div fxLayout="row" fxLayoutAlign="center center" class="footer">
         Copyright © 2023 Medical Training Distance Learning. All Rights Reserved
       </div>
