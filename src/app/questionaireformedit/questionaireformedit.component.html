@@ -74,14 +74,145 @@
               </mat-select>
             </mat-form-field>
 
-            <button mat-raised-button color="accent" (click)="openDialog()">Preview Selected Video</button>
+            <button mat-raised-button color="accent" (click)="openDialog()">Preview
+              Selected Video</button>
 
           </mat-expansion-panel>
 
           <mat-expansion-panel>
+
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <mat-icon class="mdtl-blue">question_answer</mat-icon>
+                <strong> Questions Added </strong>
+              </mat-panel-title>
+
+
+
+            </mat-expansion-panel-header>
+
+            <mat-vertical-stepper [linear]="false" #stepper class="questions-body">
+
+              <mat-step [stepControl]="firstFormGroup">
+                <form>
+                  <ng-template matStepLabel> <strong> What is the major
+                      advantage of using 0.2mm cutting blade on first skin ?
+                    </strong> </ng-template>
+
+                  <mat-selection-list #q1answersmodel [multiple]="false">
+                    <mat-list-option *ngFor="let answers of q1answers"
+                      [value]="answers">
+                      <span> {{answers}} </span>
+                    </mat-list-option>
+                  </mat-selection-list>
+
+
+                  <p class="answer-selected" fxLayoutAlign="center center">
+                    <strong fxFlex="1 1 auto"> <mat-label class="mdtl-pink">
+                        The Answer selected as :</mat-label> <mat-label
+                        class="mdtl-blue">
+                        {{q1answersmodel.selectedOptions.hasValue() ?
+                        q1answersmodel.selectedOptions.selected[0].value :
+                        'No answer selected'}} </mat-label> </strong>
+
+                    <button mat-raised-button
+                      color="primary" class="continue-q">Edit</button>
+
+  <button mat-button matStepperNext mat-raised-button
+                      color="accent" class="continue-q">Next</button>
+                  </p>
+
+
+
+
+
+                </form>
+              </mat-step>
+
+              <mat-step [stepControl]="secondFormGroup">
+                <form>
+                  <ng-template matStepLabel> <strong> What are the major Tools
+                    </strong> </ng-template>
+
+                  <mat-selection-list #q2answersmodel [multiple]="false">
+                    <mat-list-option *ngFor="let answers of q1answers"
+                      [value]="answers">
+                      <span> {{answers}} </span>
+                    </mat-list-option>
+                  </mat-selection-list>
+
+
+                  <p class="answer-selected" fxLayoutAlign="center center">
+                    <strong fxFlex="1 1 auto"> <mat-label class="mdtl-pink">
+                        Your Answer is :</mat-label> <mat-label
+                        class="mdtl-blue">
+                        {{q2answersmodel.selectedOptions.hasValue() ?
+                        q2answersmodel.selectedOptions.selected[0].value :
+                        'No answer selected'}} </mat-label> </strong>
+                    <button mat-button matStepperBack mat-raised-button
+                      color="primary" class="continue-q">Back</button>
+
+                    <button mat-button matStepperNext mat-raised-button
+                      color="primary" class="continue-q">Edit</button>
+
+  <button mat-button matStepperNext mat-raised-button
+                      color="accent" class="continue-q">Next</button>
+                  </p>
+
+
+
+
+
+                </form>
+              </mat-step>
+
+              <mat-step [stepControl]="thirdFormGroup">
+                <form>
+                  <ng-template matStepLabel> <strong> Select the wrong statement
+                    </strong> </ng-template>
+
+                  <mat-selection-list #q3answersmodel [multiple]="false">
+                    <mat-list-option *ngFor="let answers of q1answers"
+                      [value]="answers">
+                      <span> {{answers}} </span>
+                    </mat-list-option>
+                  </mat-selection-list>
+
+
+                  <p class="answer-selected" fxLayoutAlign="center center">
+                    <strong fxFlex="1 1 auto"> <mat-label class="mdtl-pink">
+                        Your Answer is :</mat-label> <mat-label
+                        class="mdtl-blue">
+                        {{q3answersmodel.selectedOptions.hasValue() ?
+                        q3answersmodel.selectedOptions.selected[0].value :
+                        'No answer selected'}} </mat-label> </strong>
+
+                    <button mat-button matStepperNext mat-raised-button
+                      color="primary" class="continue-q">Back</button>
+
+                    <button mat-button matStepperNext mat-raised-button
+                      color="primary" class="continue-q">Edit</button>
+
+  <button mat-button matStepperNext mat-raised-button
+                      color="accent" class="continue-q">Next</button>
+                  </p>
+
+
+
+
+
+                </form>
+              </mat-step>
+
+
+            </mat-vertical-stepper>
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel class="add-single-question">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon class="mdtl-blue"> add_comment </mat-icon>
                 <strong> Create your Questionaire</strong>
               </mat-panel-title>
             </mat-expansion-panel-header>
@@ -90,21 +221,16 @@
 
               <h4>
                 <mat-label class="question-number">Q:1</mat-label>
-
                 <mat-form-field class="add-question">
                   <mat-label>Add your Question</mat-label>
                   <input matInput placeholder="Ex. What is the term of Medicine is perfectly match from out of these" />
                 </mat-form-field>
 
 
-                </h4>
+              </h4>
 
-              <mat-selection-list #q1answersmodel [multiple]="true" class="add-question-model">
-
-                <mat-form-field class="add-question">
-                  <mat-label>Add your Question</mat-label>
-                  <input matInput placeholder="Ex. What is the term of Medicine is perfectly match from out of these" />
-                </mat-form-field>
+              <mat-selection-list #q1answersmodel [multiple]="true"
+                class="add-question-model">
 
                 <mat-list-option>
 
@@ -142,21 +268,19 @@
 
                 </mat-list-option>
 
-
-
-
-
-
-
               </mat-selection-list>
 
-              <p class="answer-selected">
-                <strong> <mat-label class="mdtl-pink"> Answer/s for this question:</mat-label>
+              <p class="answer-selected" fxLayout="row">
+                <strong> <mat-label class="mdtl-pink"> Answer/s for this
+                    question:</mat-label>
 
                   <mat-label class="mdtl-blue">
                     {{q1answersmodel.selectedOptions.hasValue() ?
                     q1answersmodel.selectedOptions.selected[0].value : 'None'}}
                   </mat-label> </strong>
+                  <span class="spacer"></span>
+                  <button color="primary" mat-raised-button> Add Question </button>
+
               </p>
 
 
@@ -170,8 +294,7 @@
 
       <mat-card-actions>
 
-        <button color="primary" mat-raised-button> Submit Questionaire</button>
-
+        <button color="primary" mat-raised-button> Submit Questionaire </button>
       </mat-card-actions>
 
     </mat-card>

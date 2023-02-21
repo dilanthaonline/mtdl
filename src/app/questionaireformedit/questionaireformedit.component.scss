@@ -49,8 +49,7 @@ mat-accordion {
 {
   mat-list-option
   {
-    padding: 15px;
-    height: 105px;
+    height: 74px;
   }
 }
 
@@ -63,4 +62,19 @@ mat-card-actions
 .select-media
 {
   width: 100%;
+}
+
+.add-single-question
+{
+  background: #dbe1e9;
+    border: 3px solid #7ea3c9;
+    margin-top: 9px;
+    border-radius: 4px;
+}
+.answer-selected
+{
+  button
+  {
+    margin-left: 10px;
+  }
 }
