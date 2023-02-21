@@ -5,6 +5,15 @@
   <strong> Dr. Joeroge</strong>
   </p>
  <span class="spacer"></span>
- <button mat-flat-button color="primary">Logout</button>
+
+ <div class="toolbar-controllers" fxLayoutGap="10px" fxLayoutAlign="center center">
+ <button mat-mini-fab color="primary" class="mat-elevation-z0" (click)="loadModule('UserprofileComponent')">
+  <mat-icon> manage_accounts </mat-icon>
+</button>
+
+  <button mat-button color="primary" class="mat-elevation-z0">
+   <mat-icon>logout</mat-icon>
+  </button>
+</div>
 
 </mat-toolbar>

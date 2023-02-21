@@ -5,7 +5,8 @@ import { MylessonsComponent } from './mylessons/mylessons.component';
 import { QuestionnairesComponent } from './questionnaires/questionnaires.component'
 import { QuestionaireformComponent } from './questionaireform/questionaireform.component'
 import { QuestionaireformeditComponent } from './questionaireformedit/questionaireformedit.component';
-import { AssignmentsComponent } from './assignments/assignments.component'
+import { AssignmentsComponent } from './assignments/assignments.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'Myquestionnaires', component: QuestionnairesComponent},
   {path: 'QuestionnaireformviewComponent', component: QuestionaireformComponent},
   {path: 'QuestionnaireformeditComponent', component: QuestionaireformeditComponent},
-  {path: 'AssignmentComponent', component: AssignmentsComponent}
+  {path: 'AssignmentComponent', component: AssignmentsComponent},
+  {path: 'UserprofileComponent', component: UserprofileComponent}
 
 ];
 

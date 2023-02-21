@@ -29,6 +29,7 @@ import { QuestionaireformComponent } from './questionaireform/questionaireform.c
 import { QuestionaireformeditComponent } from './questionaireformedit/questionaireformedit.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { AssignmentsComponent } from './assignments/assignments.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
@@ -43,7 +44,8 @@ import { AssignmentsComponent } from './assignments/assignments.component';
     TopnavbarComponent,
     QuestionaireformComponent,
     QuestionaireformeditComponent,
-    AssignmentsComponent
+    AssignmentsComponent,
+    UserprofileComponent
   ],
   imports: [
     FlexLayoutModule,

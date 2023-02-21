@@ -1,0 +1,21 @@
+table
+{
+  td
+  {
+    padding-right: 20px;
+
+    &.padding-right-null
+    {
+      padding-right: 0;
+    }
+  }
+}
+.profile-input-full
+{
+  width: 100%;
+}
+
+.user-profile-wrapper
+{
+  width: 700px;
+}
