@@ -19,3 +19,46 @@ table
 {
   width: 700px;
 }
+
+
+
+
+.user-thumb {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  position: relative;
+
+  img {
+    max-width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+
+  .change-avatar
+  {
+    margin: 0;
+    position: absolute;
+    background: #0f1954ad;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    line-height: 10px;
+    z-index: 100;
+    opacity: 0;
+  }
+
+  &:hover
+  {
+    .change-avatar
+    {
+
+      opacity: 1;
+      transition: .2s linear all;
+    }
+  }
+
+
+}
