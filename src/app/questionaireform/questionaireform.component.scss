@@ -3,6 +3,16 @@
     margin-bottom: 10px;
   }
 
+
+  mat-card-title
+  {
+    width: calc(100vw - 300px);
+  }
+  mat-card-content
+  {
+    padding-top: 15px;
+  }
+
   .video-thumb {
     margin: 10px 0;
   }
@@ -32,20 +42,6 @@ mat-accordion {
 
 mat-expansion-panel {
 
-  .question-wrapper {
-    .question-number {
-      margin-right: 10px;
-      background: #eb008b;
-      border-radius: 5px;
-      padding: 4px;
-      color: #fff;
-
-    }
-
-    h4 {
-      margin-bottom: 0;
-    }
-  }
 
   mat-list-option {
     height: 34px;
@@ -55,10 +51,6 @@ mat-expansion-panel {
 
 
     }
-  }
-
-  mat-selection-list {
-    margin-left: 30px;
   }
 
 }
@@ -71,4 +63,13 @@ mat-expansion-panel {
 
 mat-card-actions {
   padding: 40px 20px 20px;
+}
+
+.questions-body
+{
+margin-left: -23px;
+}
+.continue-q
+{
+  margin: 0 5px;
 }

@@ -1,6 +1,10 @@
+
+
+
+
+
 <div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center"
   *ngIf="!visible">
-
   <mat-card>
     <mat-card-content>
       <mat-card-header>
@@ -19,13 +23,29 @@
           <input matInput>
         </mat-form-field>
 
-        <button mat-flat-button color="primary" (click)="onclick()"
-          type="button">Login</button>
+        <div fxLayout="row wrap">
+
+          <button mat-flat-button color="primary"
+            (click)="loadModule('Mydashboard')" (click)="onclick()"
+            type="button">Login</button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="accent"
+            (click)="loadModule('UserprofileComponent')" (click)="onclick()"
+            type="button">Register</button>
+
+        </div>
+
+        <button mat-button color="primary" (click)="onclick()"
+          fxFlexAlign="start"
+          type="button">Forgot password</button>
+        <span fxFlex="1 1 auto"></span>
+
+
       </form>
+
 
     </mat-card-content>
   </mat-card>
-
 </div>
 
 
@@ -44,14 +64,17 @@
       </button>
 
       <app-topnavbar fxFlex="1 1 auto" fxLayout="row" fxLayoutAlign="end
-        center"></app-topnavbar>
+        center"> </app-topnavbar>
 
     </div>
 
     <div class="content-wrapper">
       <router-outlet></router-outlet>
-      <div fxLayout="row" fxLayoutAlign="center center" class="footer">
+
+      <div class="footer">
+
         Copyright © 2023 Medical Training Distance Learning. All Rights Reserved
+
       </div>
 
 

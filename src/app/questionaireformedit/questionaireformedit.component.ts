@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-questionaireformedit',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class QuestionaireformeditComponent {
 
+  constructor (private router:Router){}
+  panelOpenState = false;
+
+  loadModule(pageName:string):void{
+    this.router.navigate([`${pageName}`]);
+
+}
 }

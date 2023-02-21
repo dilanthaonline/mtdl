@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,5 +20,14 @@ export class AppComponent {
    {
      this.visible = !this.visible
    }
+
+
+  constructor (private router:Router){}
+  panelOpenState = false;
+
+  loadModule(pageName:string):void{
+    this.router.navigate([`${pageName}`]);
+
+}
 
 }
