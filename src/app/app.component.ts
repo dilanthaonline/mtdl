@@ -8,26 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mtdl';
 
-
-   //hiding info box
-   visible:boolean = false
-
-
-   //onclick toggling both
-   onclick()
-   {
-     this.visible = !this.visible
-   }
-
-
-  constructor (private router:Router){}
-  panelOpenState = false;
-
-  loadModule(pageName:string):void{
-    this.router.navigate([`${pageName}`]);
-
-}
+  constructor(private router: Router) { }
 
 }

@@ -4,13 +4,13 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 
 
 @Component({
-  selector: 'app-questionaireform',
-  templateUrl: './questionaireform.component.html',
-  styleUrls: ['./questionaireform.component.scss'],
+  selector: 'app-questionaire-form',
+  templateUrl: './questionaire-form.component.html',
+  styleUrls: ['./questionaire-form.component.scss'],
 
 
 })
-export class QuestionaireformComponent {
+export class QuestionaireFormComponent {
   panelOpenState = false;
   q1answers: string[] = ['Presice cutting line', 'Pressure point is good', 'Made by Nano Technology', 'Metal is new CR mixed'];
   q2answers: string[] = ['Presice cutting line', 'Pressure point is good', 'Made by Nano Technology', 'Metal is new CR mixed'];

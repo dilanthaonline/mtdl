@@ -1,51 +1,54 @@
+import { AuthGuard } from './auth.guard';
 import { NgModule } from '@angular/core';
-import {MatNativeDateModule} from '@angular/material/core'
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
-import { MtdlmenuComponent } from './mtdlmenu/mtdlmenu.component';
-import { MylessonsComponent } from './mylessons/mylessons.component';
-import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
+import { AssignmentsComponent } from './assignments/assignments.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { TopnavbarComponent } from './topnavbar/topnavbar.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
-import { QuestionaireformComponent } from './questionaireform/questionaireform.component';
-import { QuestionaireformeditComponent } from './questionaireformedit/questionaireformedit.component';
-import {MatStepperModule} from '@angular/material/stepper';
-import { AssignmentsComponent } from './assignments/assignments.component';
-import { UserprofileComponent } from './userprofile/userprofile.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MtdlLayoutComponent } from './mtdl-layout/mtdl-layout.component';
+import { MtdlMenuComponent } from './mtdl-menu/mtdl-menu.component';
+import { MyLessonsComponent } from './my-lessons/my-lessons.component';
+import { QuestionaireFormEditComponent } from './questionaire-form-edit/questionaire-form-edit.component';
+import { QuestionaireFormComponent } from './questionaire-form/questionaire-form.component';
+import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
+import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MtdlmenuComponent,
-    MylessonsComponent,
+    MtdlMenuComponent,
+    MyLessonsComponent,
     QuestionnairesComponent,
     DashboardComponent,
     LoginComponent,
-    TopnavbarComponent,
-    QuestionaireformComponent,
-    QuestionaireformeditComponent,
+    TopNavBarComponent,
+    QuestionaireFormComponent,
+    QuestionaireFormEditComponent,
     AssignmentsComponent,
-    UserprofileComponent
+    UserProfileComponent,
+    MtdlLayoutComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -71,7 +74,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule
 
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

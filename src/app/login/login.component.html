@@ -1,7 +1,4 @@
-
-
-<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center"
-  *ngIf="!visible">
+<div class="login-box-wrapper" fxLayout="column" fxLayoutAlign="center center">
   <mat-card>
     <mat-card-content>
       <mat-card-header>
@@ -12,29 +9,24 @@
       <form class="login-box" fxLayout="column" fxLayoutGap="5px">
         <mat-form-field>
           <mat-label> Name </mat-label>
-          <input matInput>
+          <input matInput #name>
         </mat-form-field>
 
         <mat-form-field>
           <mat-label> Password </mat-label>
-          <input matInput>
+          <input matInput #pasword type="password">
         </mat-form-field>
 
         <div fxLayout="row wrap">
 
-          <button mat-flat-button color="primary"
-            (click)="loadModule('Mydashboard')" (click)="onclick()"
+          <button mat-flat-button color="primary" (click)="loadModule('MyDashboard',name.value,pasword.value)"
             type="button">Login</button>
           <span class="spacer"></span>
-          <button mat-flat-button color="accent"
-            (click)="loadModule('UserprofileComponent')" (click)="onclick()"
-            type="button">Register</button>
+          <button mat-flat-button color="accent" (click)="loadModule('Register')" type="button">Register</button>
 
         </div>
 
-        <button mat-button color="primary" (click)="onclick()"
-          fxFlexAlign="start"
-          type="button">Forgot password</button>
+        <button mat-button color="primary" fxFlexAlign="start" type="button">Forgot password</button>
         <span class="spacer"></span>
 
 

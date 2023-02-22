@@ -1,4 +1,3 @@
-
 <div class="qformview-wrapper">
 
 
@@ -22,15 +21,14 @@
         <mat-card-title class="mdtl-blue">
           <strong> General Training on Puncture wounds</strong>
         </mat-card-title>
-        <mat-card-subtitle> <mat-label> Assignment by </mat-label> <mat-label
-            class="mdtl-blue">Dr. Jeorge Samarasekara </mat-label> <mat-label>
+        <mat-card-subtitle> <mat-label> Assignment by </mat-label> <mat-label class="mdtl-blue">Dr. Jeorge Samarasekara
+          </mat-label> <mat-label>
             M.B.B.S </mat-label> </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
 
         <mat-accordion>
-          <mat-expansion-panel (opened)="panelOpenState= false"
-            (closed)="panelOpenState= false">
+          <mat-expansion-panel (opened)="panelOpenState= false" (closed)="panelOpenState= false">
 
             <mat-expansion-panel-header>
               <mat-panel-title>
@@ -40,16 +38,14 @@
 
             </mat-expansion-panel-header>
 
-            <iframe width="100%" height="500"
-              src="https://www.youtube.com/embed/sNS67ZJQVDA" title="YouTube
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/sNS67ZJQVDA" title="YouTube
               video player" frameborder="0" allow="accelerometer; autoplay;
               clipboard-write; encrypted-media; gyroscope; picture-in-picture;
               web-share" allowfullscreen></iframe>
 
           </mat-expansion-panel>
 
-          <mat-expansion-panel (opened)="panelOpenState= true"
-            (closed)="panelOpenState= false">
+          <mat-expansion-panel (opened)="panelOpenState= true" (closed)="panelOpenState= false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <mat-icon class="mdtl-blue">question_answer</mat-icon>
@@ -58,7 +54,7 @@
             </mat-expansion-panel-header>
 
 
-            <mat-vertical-stepper [linear]="false" #stepper  class="questions-body">
+            <mat-vertical-stepper [linear]="false" #stepper class="questions-body">
 
               <mat-step [stepControl]="firstFormGroup">
                 <form>
@@ -67,8 +63,7 @@
                     </strong> </ng-template>
 
                   <mat-selection-list #q1answersmodel [multiple]="false">
-                    <mat-list-option *ngFor="let answers of q1answers"
-                      [value]="answers">
+                    <mat-list-option *ngFor="let answers of q1answers" [value]="answers">
                       <span> {{answers}} </span>
                     </mat-list-option>
                   </mat-selection-list>
@@ -76,14 +71,12 @@
 
                   <p class="answer-selected" fxLayoutAlign="center center">
                     <strong fxFlex="1 1 auto"> <mat-label class="mdtl-pink">
-                        Your Answer is :</mat-label> <mat-label
-                        class="mdtl-blue">
+                        Your Answer is :</mat-label> <mat-label class="mdtl-blue">
                         {{q1answersmodel.selectedOptions.hasValue() ?
                         q1answersmodel.selectedOptions.selected[0].value :
                         'No answer selected'}} </mat-label> </strong>
 
-                    <button mat-button matStepperNext mat-raised-button
-                      color="accent" class="continue-q">Next</button>
+                    <button mat-button matStepperNext mat-raised-button color="accent" class="continue-q">Next</button>
                   </p>
 
 
@@ -99,8 +92,7 @@
                     </strong> </ng-template>
 
                   <mat-selection-list #q2answersmodel [multiple]="false">
-                    <mat-list-option *ngFor="let answers of q1answers"
-                      [value]="answers">
+                    <mat-list-option *ngFor="let answers of q1answers" [value]="answers">
                       <span> {{answers}} </span>
                     </mat-list-option>
                   </mat-selection-list>
@@ -108,12 +100,11 @@
 
                   <p class="answer-selected" fxLayoutAlign="center center">
                     <strong fxFlex="1 1 auto"> <mat-label class="mdtl-pink">
-                      Your Answer is :</mat-label> <mat-label
-                      class="mdtl-blue">
-                      {{q2answersmodel.selectedOptions.hasValue() ?
-                      q2answersmodel.selectedOptions.selected[0].value :
-                      'No answer selected'}} </mat-label> </strong>
-                        <button mat-button matStepperBack mat-raised-button color="primary" class="continue-q">Back</button>
+                        Your Answer is :</mat-label> <mat-label class="mdtl-blue">
+                        {{q2answersmodel.selectedOptions.hasValue() ?
+                        q2answersmodel.selectedOptions.selected[0].value :
+                        'No answer selected'}} </mat-label> </strong>
+                    <button mat-button matStepperBack mat-raised-button color="primary" class="continue-q">Back</button>
 
                     <button mat-button matStepperNext mat-raised-button color="accent" class="continue-q">Next</button>
                   </p>
@@ -131,26 +122,22 @@
                     </strong> </ng-template>
 
                   <mat-selection-list #q3answersmodel [multiple]="false">
-                    <mat-list-option *ngFor="let answers of q1answers"
-                      [value]="answers">
+                    <mat-list-option *ngFor="let answers of q1answers" [value]="answers">
                       <span> {{answers}} </span>
                     </mat-list-option>
                   </mat-selection-list>
 
 
-                  <p class="answer-selected"fxLayoutAlign="center center">
+                  <p class="answer-selected" fxLayoutAlign="center center">
                     <strong fxFlex="1 1 auto"> <mat-label class="mdtl-pink">
-                      Your Answer is :</mat-label> <mat-label
-                      class="mdtl-blue">
+                        Your Answer is :</mat-label> <mat-label class="mdtl-blue">
                         {{q3answersmodel.selectedOptions.hasValue() ?
                         q3answersmodel.selectedOptions.selected[0].value :
                         'No answer selected'}} </mat-label> </strong>
 
-                        <button mat-button matStepperNext mat-raised-button
-                      color="primary" class="continue-q">Back</button>
+                    <button mat-button matStepperNext mat-raised-button color="primary" class="continue-q">Back</button>
 
-                    <button mat-button matStepperNext mat-raised-button
-                      color="accent" class="continue-q">Next</button>
+                    <button mat-button matStepperNext mat-raised-button color="accent" class="continue-q">Next</button>
                   </p>
 
 
@@ -172,8 +159,7 @@
       <mat-card-actions>
 
 
-        <button color="accent" mat-raised-button
-          (click)="loadModule('Myquestionnaires')"> Submit Answers </button>
+        <button color="accent" mat-raised-button (click)="loadModule('MyQuestionnaires')"> Submit Answers </button>
       </mat-card-actions>
 
     </mat-card>

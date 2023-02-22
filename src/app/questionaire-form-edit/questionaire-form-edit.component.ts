@@ -5,12 +5,12 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 
 
 @Component({
-  selector: 'app-questionaireformedit',
-  templateUrl: './questionaireformedit.component.html',
-  styleUrls: ['./questionaireformedit.component.scss'],
+  selector: 'app-questionaire-form-edit',
+  templateUrl: './questionaire-form-edit.component.html',
+  styleUrls: ['./questionaire-form-edit.component.scss'],
 
 })
-export class QuestionaireformeditComponent {
+export class QuestionaireFormEditComponent {
 
 
   constructor (private _formBuilder:FormBuilder, private router:Router, public dialog: MatDialog){}

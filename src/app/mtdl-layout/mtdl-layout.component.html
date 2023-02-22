@@ -1,0 +1,38 @@
+
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side" opened="true">
+    <app-mtdl-menu class="menu-content"></app-mtdl-menu>
+  </mat-drawer>
+
+  <div class="drawer-content">
+
+    <div class="topnavbar-wrapper" fxLayout="row" fxLayoutAlign="center center">
+      <button mat-icon-button class="example-icon" aria-label="Example
+        icon-button with menu icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <app-top-nav-bar fxFlex="1 1 auto" fxLayout="row" fxLayoutAlign="end
+        center"> </app-top-nav-bar>
+
+    </div>
+
+    <div class="content-wrapper">
+
+      <router-outlet></router-outlet>
+
+      <div class="footer">
+
+        Copyright © 2023 Medical Training Distance Learning. All Rights Reserved
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+
+</mat-drawer-container>

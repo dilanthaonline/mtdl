@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-mtdlmenu',
-  templateUrl: './mtdlmenu.component.html',
-  styleUrls: ['./mtdlmenu.component.scss']
+  selector: 'app-mtdl-menu',
+  templateUrl: './mtdl-menu.component.html',
+  styleUrls: ['./mtdl-menu.component.scss']
 })
-export class MtdlmenuComponent {
+export class MtdlMenuComponent {
 
   constructor (private router:Router){}
 
