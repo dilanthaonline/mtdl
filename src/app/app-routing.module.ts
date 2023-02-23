@@ -21,22 +21,22 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     children: [
-      { path: 'MyDashboard', component: DashboardComponent },
-      { path: 'MyLessons', component: MyLessonsComponent },
-      { path: 'MyQuestionnaires', component: QuestionnairesComponent },
-      { path: 'QuestionnaireForm', component: QuestionaireFormComponent },
-      { path: 'QuestionnaireFormEdit', component: QuestionaireFormEditComponent },
-      { path: 'Assignment', component: AssignmentsComponent },
-      { path: 'UserProfile', component: UserProfileComponent }
+      { path: 'myDashboard', component: DashboardComponent },
+      { path: 'myLessons', component: MyLessonsComponent },
+      { path: 'myQuestionnaires', component: QuestionnairesComponent },
+      { path: 'questionnaireForm', component: QuestionaireFormComponent },
+      { path: 'questionnaireFormEdit', component: QuestionaireFormEditComponent },
+      { path: 'assignment', component: AssignmentsComponent },
+      { path: 'userProfile', component: UserProfileComponent }
     ]
   },
   {
     path: '',
-    redirectTo: 'MyDashboard',
+    redirectTo: 'myDashboard',
     pathMatch: 'full'
   },
   {
-    path: '**', redirectTo: 'MyDashboard',
+    path: '**', redirectTo: 'myDashboard',
     pathMatch: 'full'
   }
 

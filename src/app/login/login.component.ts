@@ -18,10 +18,10 @@ export class LoginComponent implements OnInit {
   }
 
   loadModule(pageName: string, name?: string, pasword?: string) {
-    if (pageName === 'MyDashboard') {
+    if (pageName === 'myDashboard') {
       if (name === 'Joeroge' && pasword === '123') {
         localStorage.setItem('currentUser', JSON.stringify({ name, pasword }));
-        this.router.navigate([this.returnUrl]);
+        this.router.navigate([this.returnUrl==='/'?pageName:this.returnUrl]);
       }
       return;
     }
