@@ -10,7 +10,7 @@ export class MyLessonsComponent {
   constructor(private router: Router) { }
 
   loadModule(pageName: string): void {
-    this.router.navigate([`${pageName}`]);
+    this.router.navigate([pageName]);
 
   }
 }

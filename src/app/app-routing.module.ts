@@ -4,7 +4,7 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { MyLessonsComponent } from './my-lessons/my-lessons.component';
-import { QuestionaireFormComponent } from './questionaire-form/questionaire-form.component';
+import { QuestionnaireFormComponent } from './questionnaire-form/questionnaire-form.component';
 import { QuestionaireFormEditComponent } from './questionaire-form-edit/questionaire-form-edit.component';
 import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -14,7 +14,7 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'Register', component: UserProfileComponent },
+  { path: 'register', component: UserProfileComponent },
   {
     path: '',
     component: MtdlLayoutComponent,
@@ -24,7 +24,7 @@ const routes: Routes = [
       { path: 'myDashboard', component: DashboardComponent },
       { path: 'myLessons', component: MyLessonsComponent },
       { path: 'myQuestionnaires', component: QuestionnairesComponent },
-      { path: 'questionnaireForm', component: QuestionaireFormComponent },
+      { path: 'questionnaireForm', component: QuestionnaireFormComponent },
       { path: 'questionnaireFormEdit', component: QuestionaireFormEditComponent },
       { path: 'assignment', component: AssignmentsComponent },
       { path: 'userProfile', component: UserProfileComponent }

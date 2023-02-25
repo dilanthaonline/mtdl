@@ -1,22 +1,18 @@
-table
-{
-  td
-  {
+table {
+  td {
     padding-right: 20px;
 
-    &.padding-right-null
-    {
+    &.padding-right-null {
       padding-right: 0;
     }
   }
 }
-.profile-input-full
-{
+
+.profile-input-full {
   width: 100%;
 }
 
-.user-profile-wrapper
-{
+.user-profile-wrapper {
   width: 700px;
 }
 
@@ -37,8 +33,7 @@ table
     position: absolute;
   }
 
-  .change-avatar
-  {
+  .change-avatar {
     margin: 0;
     position: absolute;
     background: #0f1954ad;
@@ -50,10 +45,8 @@ table
     opacity: 0;
   }
 
-  &:hover
-  {
-    .change-avatar
-    {
+  &:hover {
+    .change-avatar {
 
       opacity: 1;
       transition: .2s linear all;
@@ -61,4 +54,8 @@ table
   }
 
 
+}
+
+.is-register {
+  padding: 20px;
 }

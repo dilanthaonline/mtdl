@@ -1,4 +1,4 @@
-import { AuthGuard } from './auth.guard';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatButtonModule } from '@angular/material/button';
@@ -23,13 +23,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
+import { AuthGuard } from './auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { MtdlLayoutComponent } from './mtdl-layout/mtdl-layout.component';
 import { MtdlMenuComponent } from './mtdl-menu/mtdl-menu.component';
 import { MyLessonsComponent } from './my-lessons/my-lessons.component';
 import { QuestionaireFormEditComponent } from './questionaire-form-edit/questionaire-form-edit.component';
-import { QuestionaireFormComponent } from './questionaire-form/questionaire-form.component';
+import { QuestionnaireFormComponent } from './questionnaire-form/questionnaire-form.component';
 import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -44,7 +45,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     DashboardComponent,
     LoginComponent,
     TopNavBarComponent,
-    QuestionaireFormComponent,
+    QuestionnaireFormComponent,
     QuestionaireFormEditComponent,
     AssignmentsComponent,
     UserProfileComponent,
@@ -71,8 +72,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     MatListModule,
     MatToolbarModule,
     MatStepperModule,
-    MatDialogModule
-
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

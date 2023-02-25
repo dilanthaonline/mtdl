@@ -14,15 +14,15 @@
 
         <mat-form-field>
           <mat-label> Password </mat-label>
-          <input matInput #pasword type="password">
+          <input matInput #password type="password">
         </mat-form-field>
 
         <div fxLayout="row wrap">
 
-          <button mat-flat-button color="primary" (click)="loadModule('myDashboard',name.value,pasword.value)"
+          <button mat-flat-button color="primary" (click)="loadModule('myDashboard',name.value,password.value)"
             type="button">Login</button>
           <span class="spacer"></span>
-          <button mat-flat-button color="accent" (click)="loadModule('Register')" type="button">Register</button>
+          <button mat-flat-button color="accent" (click)="loadModule('register')" type="button">Register</button>
 
         </div>
 
