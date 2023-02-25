@@ -29,7 +29,7 @@ import { LoginComponent } from './login/login.component';
 import { MtdlLayoutComponent } from './mtdl-layout/mtdl-layout.component';
 import { MtdlMenuComponent } from './mtdl-menu/mtdl-menu.component';
 import { MyLessonsComponent } from './my-lessons/my-lessons.component';
-import { QuestionaireFormEditComponent } from './questionaire-form-edit/questionaire-form-edit.component';
+import { QuestionnaireFormEditComponent } from './questionnaire-form-edit/questionnaire-form-edit.component';
 import { QuestionnaireFormComponent } from './questionnaire-form/questionnaire-form.component';
 import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
@@ -48,7 +48,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     TopNavBarComponent,
     QuestionnaireFormComponent,
-    QuestionaireFormEditComponent,
+    QuestionnaireFormEditComponent,
     AssignmentsComponent,
     UserProfileComponent,
     MtdlLayoutComponent,

@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { MyLessonsComponent } from './my-lessons/my-lessons.component';
 import { QuestionnaireFormComponent } from './questionnaire-form/questionnaire-form.component';
-import { QuestionaireFormEditComponent } from './questionaire-form-edit/questionaire-form-edit.component';
+import { QuestionnaireFormEditComponent } from './questionnaire-form-edit/questionnaire-form-edit.component';
 import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MtdlLayoutComponent } from './mtdl-layout/mtdl-layout.component';
@@ -25,7 +25,7 @@ const routes: Routes = [
       { path: 'myLessons', component: MyLessonsComponent },
       { path: 'myQuestionnaires', component: QuestionnairesComponent },
       { path: 'questionnaireForm', component: QuestionnaireFormComponent },
-      { path: 'questionnaireFormEdit', component: QuestionaireFormEditComponent },
+      { path: 'questionnaireFormEdit', component: QuestionnaireFormEditComponent },
       { path: 'assignment', component: AssignmentsComponent },
       { path: 'userProfile', component: UserProfileComponent }
     ]
