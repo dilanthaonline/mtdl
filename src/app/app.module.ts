@@ -34,6 +34,8 @@ import { QuestionnaireFormComponent } from './questionnaire-form/questionnaire-f
 import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { LoadingComponent } from './loading/loading.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     QuestionaireFormEditComponent,
     AssignmentsComponent,
     UserProfileComponent,
-    MtdlLayoutComponent
+    MtdlLayoutComponent,
+    LoadingComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -73,7 +76,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     MatToolbarModule,
     MatStepperModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

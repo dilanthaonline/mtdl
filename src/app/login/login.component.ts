@@ -10,7 +10,6 @@ import { MtdlService } from '../mtdl.service';
 export class LoginComponent implements OnInit {
 
   public returnUrl = '';
-  public login = false;
 
   constructor(private router: Router, private route: ActivatedRoute, private service: MtdlService) { }
 
@@ -20,12 +19,13 @@ export class LoginComponent implements OnInit {
 
   loadModule(pageName: string, userName?: string, password?: string) {
     if (pageName === 'myDashboard' && userName && password) {
-      this.login = true;
+      const loading = this.service.loading();
       this.service.login(userName, password).then((value) => {
         localStorage.setItem('currentUser', JSON.stringify({ userName, password }));
+        loading.close();
         this.router.navigate([this.returnUrl === '/' ? pageName : this.returnUrl]);
       }).catch(error => {
-        this.login = false;
+        loading.close()
       })
     } else {
       this.router.navigate([pageName]);
