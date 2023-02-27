@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private service: MtdlService) { }
 
   public ngOnInit() {
+    localStorage.removeItem('currentUser');
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
@@ -21,7 +22,6 @@ export class LoginComponent implements OnInit {
     if (pageName === 'myDashboard' && userName && password) {
       const loading = this.service.loading();
       this.service.login(userName, password).then((value) => {
-        localStorage.setItem('currentUser', JSON.stringify({ userName, password }));
         loading.close();
         this.router.navigate([this.returnUrl === '/' ? pageName : this.returnUrl]);
       }).catch(error => {

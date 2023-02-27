@@ -25,10 +25,10 @@
 
       <mat-form-field appearance="fill">
         <mat-label>Your Role</mat-label>
-        <mat-select formControlName="role">
-          <mat-option value="option1">Student</mat-option>
-          <mat-option value="option2">Consultant</mat-option>
-          <mat-option value="option3">Admin</mat-option>
+        <mat-select formControlName="roleId">
+          <mat-option [value]="UserRole.Student">Student</mat-option>
+          <mat-option [value]="UserRole.Consultant">Consultant</mat-option>
+          <mat-option [value]="UserRole.Admin">Admin</mat-option>
         </mat-select>
       </mat-form-field>
 
@@ -67,7 +67,7 @@
     <p>
       <mat-form-field class="profile-input-full">
         <mat-label>Address</mat-label>
-        <textarea matInput placeholder="Ex. 100 Main St" formControlName="address1">1600 Amphitheatre Pkwy</textarea>
+        <textarea matInput placeholder="Ex. 100 Main St" formControlName="address">1600 Amphitheatre Pkwy</textarea>
       </mat-form-field>
       <mat-form-field class="profile-input-full">
         <mat-label>Address 2</mat-label>
@@ -109,7 +109,7 @@
 
           <mat-form-field class="profile-input-full">
             <mat-label>Land line</mat-label>
-            <textarea matInput placeholder="Ex. 100 Main St" formControlName="telNumber">+94 77 7548 729</textarea>
+            <textarea matInput placeholder="Ex. 100 Main St" formControlName="landline">+94 77 7548 729</textarea>
           </mat-form-field>
 
         </td>
