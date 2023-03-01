@@ -1,0 +1,32 @@
+<div class="qformview-wrapper qformview">
+  <form [formGroup]="assignmentForm">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h4 class="mdtl-blue">Assignment no : {{assignment.id}}</h4>
+
+          <mat-form-field class="add-assingment-input">
+            <mat-label>Assignment Subject</mat-label>
+            <strong color="primary">
+              <input matInput type="text" formControlName="subject" required />
+            </strong>
+          </mat-form-field>
+        </mat-card-title>
+
+        <mat-card-subtitle>
+          <mat-form-field class="add-assingment-input">
+            <mat-label>Subtitile</mat-label>
+            <input matInput type="text" formControlName="subtitile" />
+          </mat-form-field>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+
+      <mat-card-content class="assignment-button-controllers" fxLayoutGap="20px">
+        <button mat-raised-button color="primary" type="submit" (click)="onUpdateAssignment()"
+          [disabled]="!assignmentForm.valid"> Update </button>
+        <button mat-raised-button color="warn" type="" (click)="onDelete()"> Delete </button>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

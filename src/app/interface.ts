@@ -29,3 +29,9 @@ export enum UserRole {
     Consultant = 2,
     Student = 3
 }
+
+export interface Assignment {
+  id: number;
+  subject: string;
+  subtitle: string;
+}

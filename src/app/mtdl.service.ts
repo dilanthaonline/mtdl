@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LoadingComponent } from './loading/loading.component';
-import { AuthUser, User } from './interface';
+import { Assignment, AuthUser, User } from './interface';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class MtdlService {
   }
 
   constructor(private httpClient: HttpClient, private dialog: MatDialog) {
-    this._authUser = JSON.parse(localStorage.getItem('currentUser') || '');
+    this._authUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
   }
 
   public login(userName: string, password: string) {
@@ -100,6 +100,74 @@ export class MtdlService {
     return {
       close: () => { loading.close(); }
     }
+  }
+
+  // Assignments
+
+  public getAssignments = () => {
+    return new Promise<Assignment[]>((resolve, reject) => {
+      this.httpClient.get<Assignment[]>(this.endPointHost + '/assignments').subscribe({
+        next: (res) => {
+          resolve(res);
+        },
+        error: (err) => {
+          // reject(err);
+          resolve([
+            {
+              id: 1,
+              subject: 'Assignments 01',
+              subtitle: 'test',
+            }
+            ,
+            {
+              id: 2,
+              subject: 'Assignments 02',
+              subtitle: 'test',
+            }
+            ,
+            {
+              id: 3,
+              subject: 'Assignments 03',
+              subtitle: 'test',
+            }
+            ,
+            {
+              id: 4,
+              subject: 'Assignments 04',
+              subtitle: 'test',
+            }
+
+          ]);
+        }
+      })
+    });
+  }
+
+  public addUpdateAssignments = (assignment: Assignment) => {
+    return new Promise<Assignment>((resolve, reject) => {
+      this.httpClient.post<Assignment>(this.endPointHost + '/assignments/addUpdateAssignments', { assignment }).subscribe({
+        next: (res) => {
+          resolve(res);
+        },
+        error: (err) => {
+          reject(err);
+        }
+      })
+    });
+  }
+
+  public deleteAssignment = (assignmentId: number) => {
+    return new Promise<any>((resolve, reject) => {
+      this.httpClient.delete<any>(this.endPointHost + '/assignments?id=' + assignmentId).subscribe({
+        next: (res) => {
+          resolve(res);
+        },
+        error: (err) => {
+          // reject(err);
+          resolve(err);
+        }
+      })
+    });
   }
 
 }

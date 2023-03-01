@@ -36,6 +36,7 @@ import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoadingComponent } from './loading/loading.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AssignmentsItemComponent } from './assignments/assignments-item/assignments-item.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AssignmentsComponent,
     UserProfileComponent,
     MtdlLayoutComponent,
-    LoadingComponent
+    LoadingComponent,
+    AssignmentsItemComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -77,7 +79,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatStepperModule,
     MatDialogModule,
     HttpClientModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [AuthGuard],
